@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>REST documentation</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+      crossorigin="anonymous">
+    <style type="text/css">
+    </style>
+  </head>
+  <body>
+    <div class='container-fluid'>
+      <h1>REST documentation</h1>
+      <p>
+        All data returned is JSON formatted. When submitting data, 
+        submit it as JSON.
+      </p>
+      <div class="row">
+        <div class="col-8">
+          <h2>GET /api/addresses</h2>
+          <p>
+            Returns a list of all the addresses.
+          </p>
+          <button type="button" class="btn btn-primary" id="get_addresses_button">
+            GET /api/addresses
+          </button>
+          <div class="card">
+            <div class="card-header">
+              output
+            </div>
+            <div class="card-body">
+              <pre><code id="get_addresses_output"></code></pre>
+            </div>
+          </div>
+
+          <h2>
+            GET /api/addresses/{id}
+          </h2>
+          <p>
+            Returns a specific address identified by address id. Output is JSON formatted.
+          </p>
+          <button type="button" class="btn btn-primary" id="get_address_id_button">
+            GET /api/addresses/<span id="get_address_id">{id}</span>
+          </button>
+          <div class="card">
+            <div class="card-header">
+              output
+            </div>
+            <div class="card-body">
+              <pre><code id="get_address_id_output"></code></pre>
+            </div>
+          </div>
+
+          <h2>
+            POST /api/addresses
+          </h2>
+          <p>
+            Insert into the database a new address. Returns same address with addition of newly allocated id. Operation is idempotent.
+          </p>
+          <button type="button" class="btn btn-primary" id="post_address_button">
+            POST /api/addresses
+          </button>
+          <div class="card">
+            <div class="card-header">
+              post body
+            </div>
+            <div class="card-body">
+              <pre><code id="post_address_body"></code></pre>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              output
+            </div>
+            <div class="card-body">
+              <pre><code id="post_address_output"></code></pre>
+            </div>
+          </div>
+
+          <h2>
+            PUT /api/addresses/{id}
+          </h2>
+          <p>
+            An idempotent operation that replaces the address at {id} location with another address.
+          </p>
+          <button type="button" class="btn btn-primary" id="put_address_button">
+            PUT /api/addresses/<span id="put_address_id">{id}</span>
+          </button>
+          <div class="card">
+            <div class="card-header">
+              put body
+            </div>
+            <div class="card-body">
+              <pre><code id="put_address_body"></code></pre>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              output
+            </div>
+            <div class="card-body">
+              <pre><code id="put_address_output"></code></pre>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <p>
+      </p>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+      crossorigin="anonymous"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+    <script src="rest_doc.bundle.js"></script>
+  </body>
+</html>
+

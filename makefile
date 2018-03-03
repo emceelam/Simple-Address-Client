@@ -2,7 +2,7 @@
 # $<  first dependency 
 # $^  all dependencies
 
-all: node_modules dist/address_app.html dist/bundle.js address_app.conf.json
+all: node_modules dist/address_app.html dist/app.bundle.js dist/rest_doc.bundle.js address_app.conf.json
 
 node_modules:
 	npm install
@@ -15,10 +15,14 @@ dist/address_app.html: script/xslate.pl script/address_app.html.tx address_app.c
 	mkdir -p dist
 	script/xslate.pl > $@
 
-dist/bundle.js: webpack.config.js address_app.conf.json src/index.js src/AddressMap.js src/AjaxAddress.js src/ListAddresses.js src/util.js
+dist/app.bundle.js: webpack.config.js address_app.conf.json src/index.js src/AddressMap.js src/AjaxAddress.js src/ListAddresses.js src/util.js
+	npm run build
+
+dist/rest_doc.bundle.js: webpack.config.js src/rest_doc.js src/AjaxAddress.js
 	npm run build
 
 clean:
 	rm dist/address_app.html
-	rm dist/bundle.js
+	rm dist/app.bundle.js
+	rm dist/rest_doc.bundle.js
 

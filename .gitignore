@@ -2,6 +2,7 @@ script/address.db
 address_app.conf.json
 node_modules
 package-lock.json
-dist/bundle.js
+dist/app.bundle.js
+dist/rest_doc.bundle.js
 dist/address_app.html
 dist/README.html

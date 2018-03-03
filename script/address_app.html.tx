@@ -99,7 +99,10 @@
       src="https://maps.googleapis.com/maps/api/js?key=<: $api_key :>&callback=initMap"
       type="text/javascript">
     </script>
-    <script src="bundle.js"></script>
+
+    <!-- webpack bundling of multiple javascript files -->
+    <script src="app.bundle.js"></script>
+
   </body>
 </html>
 <!--
