@@ -7,14 +7,15 @@ function rest_doc_start () {
   var id_to_address = {};
   ajax_address.promise_get_all().then(function(addresses) {
     addresses.forEach( function (address) {
-      var id = address['id'];
+      let id = address['id'];
       id_to_address[id] = address;
 
     });
-    var ids = Object.keys(id_to_address);
-    var first_id = ids[0];
+    let ids = Object.keys(id_to_address);
+    let first_id = ids[0];
     $("#get_address_id").text(first_id);
     $("#put_address_id").text(first_id);
+    $("#delete_address_id").text(first_id);
     $("#get_address_id_button").click(function () {
       ajax_address.promise_get_one(first_id).then(function(address) {
         $("#get_address_id_output").text(JSON.stringify(address, null, 4));
@@ -43,7 +44,20 @@ function rest_doc_start () {
       $("#post_address_output").text(JSON.stringify(address, null, 4));
     });
   });
-  
+
+  $("#delete_address_button").click(function() {
+    var delete_id = $("#delete_address_id").text();
+    ajax_address.promise_delete(delete_id).then( function () {
+      console.log (`delete ${delete_id}`);
+      delete id_to_address[delete_id];
+      let ids = Object.keys (id_to_address);
+      let first_id = ids[0];
+      $("#get_address_id").text(first_id);
+      $("#put_address_id").text(first_id);
+      $("#delete_address_id").text(first_id);
+    });
+  });
+
   var put_data = {
     street : "3051 Corvin Dr",
     city   : "Santa Clara",

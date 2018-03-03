@@ -83,6 +83,24 @@
           </div>
 
           <h2>
+            DELETE /api/addresses/{id}
+          </h2>
+          <p>
+            Delete the address using the specified id.
+          </p>
+          <button type="button" class="btn btn-primary" id="delete_address_button">
+            DELETE /api/addresses/<span id="delete_address_id">{id}</span>
+          </button>
+          <div class="card">
+            <div class="card-header">
+              output
+            </div>
+            <div class="card-body">
+              <pre><code id="delete_address_output"></code></pre>
+            </div>
+          </div>
+
+          <h2>
             PUT /api/addresses/{id}
           </h2>
           <p>
