@@ -2,7 +2,7 @@
 # $<  first dependency 
 # $^  all dependencies
 
-all: node_modules ./public/address_app.html public/bundle.js script/address.db address_app.conf.json
+all: node_modules ./public/address_app.html public/bundle.js address_app.conf.json
 
 node_modules:
 	npm install
@@ -18,13 +18,7 @@ public/address_app.html: script/xslate.pl script/address_app.html.tx address_app
 public/bundle.js: webpack.config.js address_app.conf.json src/index.js src/AddressMap.js src/AjaxAddress.js src/ListAddresses.js src/util.js
 	npm run build
 
-script/address.db:
-	sqlite3 $@ < script/create.sql
-	chgrp webteam $@
-	chmod g+w $@
-
 clean:
-	rm script/address.db
 	rm public/address_app.html
 	rm public/bundle.js
 
