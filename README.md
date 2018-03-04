@@ -4,56 +4,48 @@ Simple Adddress App
 
 # DESCRIPTION
 
-This is a simple address app, utilizing Google Maps, AJAX, and REST. The REST side is coded with Perl Mojolicious.
+This is a simple address app, utilizing Google Maps, AJAX, and REST. The REST side is available for [download](https://github.com/emceelam/Simple-Address-Mojo) also.
 
-# SYNOPSIS
-
-Run REST server
-
-    ./script/simple_address_mojo prefork
-
-From web browser
-
-    http://localhost:3000/address_app.html
-
-# Getting a Google Map API KEY
+# GOOGLE MAP API KEY
 
 Get a [Google Map API key](https://developers.google.com/maps/documentation/javascript/get-api-key).
 
-If you are running on a public web server, you need two Google Map API keys, one for browser, another for server. For the browser, generate an API key and set Key Restriction to "HTTP referrers". For the server, generate an API key and set Key Restriction to "IP Addresses"
+If you are running on a public server, generate an API key and set Key Restriction to "HTTP referrers". This API key works on browser clients (exactly what we need)
 
 If you are running on a localhost, you can use a single API key for both browser and server. When you generate your API key, set Key restriction to "None".
 
 # INSTALL
 
-Recent version of [Node.js](https://nodejs.org/en/download/package-manager/) is required.
+Recent version of [Node.js](https://nodejs.org/en/download/package-manager/) is required. Ubuntu 16.04 default npm will not work.
 
 Open terminal
 
-    sudo cpanm \
-      Mojolicious \
-      File::Slurp \
-      JSON \
-      DBD::SQLite \
-      Text::Xslate \
-      Mojolicious::Plugin::SecureCORS
+    sudo cpanm Text::Xslate
+
+    git clone git@github.com:emceelam/Simple-Address-Client.git simple_address_client
+    cd simple_address_client
 
     make
 
     vi address_app.conf.json
       # Add API key(s)
-      # Set hostname if public web server
+      # Set hostname and port, e.g. sjsutech.com, 3000
 
     make
+      # yes, again
       # uses modified address_app.conf to regenerate files
 
-Now run it
+    # put a soft link of the dist directory to your public_htmlt directory
+    ln -s ~/project/simple_address_client/dist/ ~/public_html/simple_address_client
 
-    ./script/simple_address_mojo prefork
 
 Open web browser
 
-    http://localhost:3000/address_app.html
+    http://localhost/~username/simple_address_client
+
+# SEE ALSO
+
+The server side portion, [Simple Address Mojo](https://github.com/emceelam/Simple-Address-Mojo)
 
 # AUTHOR
 
