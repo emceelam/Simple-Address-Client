@@ -2,7 +2,7 @@
 # $<  first dependency 
 # $^  all dependencies
 
-all: node_modules dist/index.html dist/app.bundle.js dist/rest_doc.bundle.js address_app.conf.json
+all: node_modules dist/address_app.html dist/app.bundle.js dist/rest_doc.bundle.js address_app.conf.json
 
 node_modules:
 	npm install
@@ -11,7 +11,7 @@ address_app.conf.json: address_app.conf.example
 	cp $< $@
 	@echo "* Don't forget to add your Google Map API key(s) to "$@
 
-dist/index.html: script/xslate.pl script/address_app.html.tx address_app.conf.json
+dist/address_app.html: script/xslate.pl script/address_app.html.tx address_app.conf.json
 	mkdir -p dist
 	script/xslate.pl > $@
 
