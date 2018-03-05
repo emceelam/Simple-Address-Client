@@ -36,7 +36,7 @@ Open terminal
       # uses modified address_app.conf to regenerate files
 
     # put a soft link of the dist directory to your public_htmlt directory
-    ln -s ~/project/simple_address_client/dist/ ~/public_html/simple_address_client
+    ln -s /your_path/simple_address_client/dist/ ~/public_html/simple_address_client
 
 
 Open web browser
