@@ -16,7 +16,7 @@ If you are running on a localhost, you can use a single API key for both browser
 
 # INSTALL
 
-Recent version of [Node.js](https://nodejs.org/en/download/package-manager/) is required. Ubuntu 16.04 default npm will not work.
+Recent version of [Node.js](https://nodejs.org/en/download/package-manager/) is required. Ubuntu 16.04 default Node.js is out of date.
 
 Open terminal
 
