@@ -11,10 +11,14 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
       crossorigin="anonymous">
     <style type="text/css">
+      #error: {
+        display: none;
+      }
     </style>
   </head>
   <body>
     <div class='container-fluid'>
+      <div class="alert alert-danger" id="error"></div>
       <h1>REST documentation</h1>
       <p>
         All data returned is JSON formatted. When submitting data, 

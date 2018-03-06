@@ -2,13 +2,17 @@ import Conf from '../address_app.conf.json';
   // webpack import
 
 export default class AjaxAddresses {
+  constructor( output_error = console.log) {
+    this.output_error = output_error;   // output_error("error text")
+  }
+
   promise_get_all () {
     return new Promise( (resolve) => {
       $.ajax({
         type: "GET",
         url: `http://${Conf.host}:${Conf.port}/api/addresses`,
         success: resolve,
-        error: this.reject
+        error: this.reject.bind(this),
       });
     });
   }
@@ -18,7 +22,7 @@ export default class AjaxAddresses {
         type: "GET",
         url: `http://${Conf.host}:${Conf.port}/api/addresses/${id}`,
         success: resolve,
-        error: this.reject
+        error: this.reject.bind(this),
       });
     });
   }
@@ -31,7 +35,7 @@ export default class AjaxAddresses {
           withCredentials: true
         },
         success: resolve,
-        error: this.reject
+        error: this.reject.bind(this),
       });
     });
   }
@@ -49,7 +53,7 @@ export default class AjaxAddresses {
         },
         dataType: "json",
         success: resolve,
-        error: this.reject
+        error: this.reject.bind(this),
       });
     });
   }
@@ -69,7 +73,7 @@ export default class AjaxAddresses {
         },
         dataType: "json",
         success: resolve,
-        error: this.reject
+        error: this.reject.bind(this),
       });
     });
   }
@@ -84,16 +88,22 @@ export default class AjaxAddresses {
         type: "GET",
         url: `http://${Conf.host}:${Conf.port}/api/geocode?street=${street}&city=${city}&state=${state}&zip=${zip}`,
         success: resolve,
-        error: this.reject
+        error: this.reject.bind(this),
       });
     });
   }
 
   // error function for failed AJAX call
-  reject (jqXHR, textStatus, errorThrown) {
-    console.log (
-      `ajax failed: ${textStatus}, ${errorThrown}, ${jqXHR.responseText}`
-    );
+  reject (xhr, textStatus, errorThrown) {
+    let error_out = "";
+
+    if (xhr.readyState == 0) {
+      error_out = `Could not connect to ${Conf.host}:${Conf.port}`;
+    }
+    else {  // generic error
+      error_out = `ajax failed: ${textStatus}, ${errorThrown}, ${xhr.responseText}`;
+    }
+    this.output_error (error_out);
   }
 }
 

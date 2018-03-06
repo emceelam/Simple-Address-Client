@@ -2,7 +2,9 @@
 import AjaxAddress from "./AjaxAddress";
 
 function rest_doc_start () {
-  var ajax_address = new AjaxAddress();
+  var ajax_address = new AjaxAddress(
+    (errorText) => { $("#error").show(300).text(errorText); }
+  );
   var id_to_address = {};
 
   ajax_address.promise_get_all().then(function(addresses) {

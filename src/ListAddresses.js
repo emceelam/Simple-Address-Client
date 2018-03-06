@@ -1,10 +1,12 @@
 import AjaxAddress from "./AjaxAddress";
-import {make_address_content } from "./util";
+import { make_address_content } from "./util";
 
 export default class ListAddresses  {
   constructor (address_map) {
     this.id_to_address = {};
-    this.ajax_address = new AjaxAddress();
+    this.ajax_address = new AjaxAddress(
+      (error_text) => { $("#error").show(300).text(error_text); }
+    );
     this.address_map = address_map;
   }
   refresh() {
