@@ -14,6 +14,7 @@ my $script_path = dirname(abs_path($0));
 chdir ($script_path);
 
 my $dest_dir = "../dist";
+my $src_dir = "../src";
 
 # process address_app.html.tx into address_app.html
 my $tx = Text::Xslate->new(
@@ -32,7 +33,10 @@ my $address_app_html = $tx->render('address_app.html.tx', {
 write_file ("$dest_dir/address_app.html", $address_app_html);
 
 my $source_code_html = $tx->render('source_code.html.tx', {
-  address_app_html => $address_app_html,
+  address_app_html  => $address_app_html,
+  ajax_address_js   => scalar read_file ("$src_dir/AjaxAddress.js"  ),
+  list_addresses_js => scalar read_file ("$src_dir/ListAddresses.js"),
+  address_map_js    => scalar read_file ("$src_dir/AddressMap.js"   ),
 });
 write_file ("$dest_dir/source_code.html", $source_code_html);
 

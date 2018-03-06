@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Source Code</title>
+    <title>Source Code Display</title>
     <meta charset="utf-8">
     <meta name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,10 +16,33 @@
   </head>
   <body>
     <div class='container-fluid'>
-      <h1>Source Code</h1>
+      <h1>Source Code Display</h1>
+      <nav class="nav nav-pills" id="source_code_tab" role="tablist">
+        <a class="nav-link active" id="address_app_html-tab" data-toggle="pill" href="#address_app_html" role="tab" aria-controls="" aria-selected="true">
+          address_app.html</a>
+        <a class="nav-link" id="ajax_address_js-tab" data-toggle="pill" href="#ajax_address_js" role="tab" aria-controls="ajax_address_js" aria-selected="false">
+          AjaxAddress.js</a>
+        <a class="nav-link" id="list_addresses_js-tab" data-toggle="pill" href="#list_addresses_js" role="tab" aria-controls="list_addresses_js" aria-selected="false">
+          ListAddresses.js</a>
+        <a class="nav-link" id="address_map_js-tab" data-toggle="pill" href="#address_map_js" role="tab" aria-controls="address_map_js" aria-selected="false">
+          AddressMap.js</a>
+      </nav>
       <div class="row">
         <div class="col-10">
-          <pre class="line-numbers line-highlight"><code class="language-html"><: $address_app_html :></code></pre>
+          <div class="tab-content">
+            <div class="tab-pane active" id="address_app_html" role="tabpanel" aria-labelledby="address_app_html-tab">
+              <pre class="line-numbers line-highlight"><code class="language-html"><: $address_app_html :></code></pre>
+            </div>
+            <div class="tab-pane" id="ajax_address_js" role="tabpanel" aria-labelledby="ajax_address_js-tab">
+              <pre class="line-numbers line-highlight"><code class="language-js"><: $ajax_address_js :></code></pre>
+            </div>
+            <div class="tab-pane" id="list_addresses_js" role="tabpanel" aria-labelledby="list_addresses_js-tab">
+              <pre class="line-numbers line-highlight"><code class="language-js"><: $list_addresses_js :></code></pre>
+            </div>
+            <div class="tab-pane" id="address_map_js" role="tabpanel" aria-labelledby="address_map_js-tab">
+              <pre class="line-numbers line-highlight"><code class="language-js"><: $address_map_js :></code></pre>
+            </div>
+          </div>
         </div>
       </div>
     </div>

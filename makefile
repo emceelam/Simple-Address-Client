@@ -15,7 +15,7 @@ dist/address_app.html: script/xslate.pl script/address_app.html.tx address_app.c
 	mkdir -p dist
 	script/xslate.pl
 
-dist/source_code.html: dist/address_app.html script/source_code.html.tx
+dist/source_code.html: script/xslate.pl script/source_code.html.tx dist/address_app.html src/AddressMap.js src/AjaxAddress.js src/ListAddresses.js
 	script/xslate.pl
 
 dist/app.bundle.js: webpack.config.js address_app.conf.json src/index.js src/AddressMap.js src/AjaxAddress.js src/ListAddresses.js src/util.js
