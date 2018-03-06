@@ -31,7 +31,7 @@ function rest_doc_start () {
     );
   });
   
-  var post_data = {
+  var post_data = {   // Weird Stuff Warehouse
     street : "384 W Carribean Dr",
     city   : "Sunnyvale",
     state  : "CA",
