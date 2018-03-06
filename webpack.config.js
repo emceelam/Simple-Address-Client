@@ -2,8 +2,9 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    app:      "./src/index.js",
-    rest_doc: "./src/rest_doc.js",
+    app:         "./src/index.js",
+    rest_doc:    "./src/rest_doc.js",
+    source_code: "./src/source_code.js",
   },
   output: {
     filename: "[name].bundle.js",
@@ -13,6 +14,13 @@ module.exports = {
     rules: [
       {
         test: require.resolve('./src/index.js'),
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ],
       }
     ]
   },

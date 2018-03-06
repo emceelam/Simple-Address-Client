@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Simple Address Client</title>
+    <title>Source Code</title>
     <meta charset="utf-8">
     <meta name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,14 +16,10 @@
   </head>
   <body>
     <div class='container-fluid'>
-      <h1>Simple Address Client</h1>
-      <div class='row'>
-        <div class='col-8'>
-          <ul>
-            <li><a href="address_app.html">Simple Address App</a></li>
-            <li><a href="rest_doc.html">Rest documentation</a></li>
-            <li><a href="source_code.html">Source Code</a></li>
-          </ul>
+      <h1>Source Code</h1>
+      <div class="row">
+        <div class="col-10">
+          <pre class="line-numbers line-highlight"><code class="language-html"><: $address_app_html :></code></pre>
         </div>
       </div>
     </div>
@@ -39,6 +35,7 @@
       src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"></script>
+    <script src="source_code.bundle.js"></script>
   </body>
 </html>
 
