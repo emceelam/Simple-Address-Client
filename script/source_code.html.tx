@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Source Code Display</title>
+    <title>Src Code Display</title>
     <meta charset="utf-8">
     <meta name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,7 +16,7 @@
   </head>
   <body>
     <div class='container-fluid'>
-      <h1>Source Code Display</h1>
+      <h1>Src Code Display</h1>
       <nav class="nav nav-pills" id="source_code_tab" role="tablist">
         <a class="nav-link active" id="address_app_html-tab" data-toggle="pill" href="#address_app_html" role="tab" aria-controls="" aria-selected="true">
           address_app.html</a>
