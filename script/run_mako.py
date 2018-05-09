@@ -24,7 +24,7 @@ spit (dest_dir + '/address_app.html', address_app_html)
 
 templ = Template(filename = 'source_code.html.mako')
 spit (dest_dir + '/source_code.html', templ.render(
-  address_app_html=escape(address_app_html),
+  address_app_html  = escape(address_app_html),
   ajax_address_js   = escape(slurp (src_dir + '/AjaxAddress.js')),
   list_addresses_js = escape(slurp (src_dir + '/ListAddresses.js')),
   address_map_js    = escape(slurp (src_dir + '/AddressMap.js'))
