@@ -11,12 +11,12 @@ address_app.conf.json: address_app.conf.example
 	cp $< $@
 	@echo "* Don't forget to add your Google Map API key(s) to "$@
 
-dist/address_app.html: script/xslate.pl script/address_app.html.tx address_app.conf.json
+dist/address_app.html: script/run_mako.py script/address_app.html.mako address_app.conf.json
 	mkdir -p dist
-	script/xslate.pl
+	script/run_mako.py
 
-dist/source_code.html: script/xslate.pl script/source_code.html.tx dist/address_app.html src/AddressMap.js src/AjaxAddress.js src/ListAddresses.js
-	script/xslate.pl
+dist/source_code.html: script/run_mako.py script/source_code.html.mako dist/address_app.html src/AddressMap.js src/AjaxAddress.js src/ListAddresses.js
+	script/run_mako.py
 
 dist/app.bundle.js: webpack.config.js address_app.conf.json src/index.js src/AddressMap.js src/AjaxAddress.js src/ListAddresses.js src/util.js
 	npm run build
