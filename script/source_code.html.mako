@@ -26,6 +26,8 @@
           ListAddresses.js</a>
         <a class="nav-link" id="address_map_js-tab" data-toggle="pill" href="#address_map_js" role="tab" aria-controls="address_map_js" aria-selected="false">
           AddressMap.js</a>
+        <a class="nav-link" id="util_js-tab" data-toggle="pill" href="#util_js" role="tab" aria-controls="util_js" aria-selected="false">
+          util.js</a>
       </nav>
       <div class="row">
         <div class="col-10">
@@ -41,6 +43,9 @@
             </div>
             <div class="tab-pane" id="address_map_js" role="tabpanel" aria-labelledby="address_map_js-tab">
               <pre class="line-numbers line-highlight"><code class="language-js">${address_map_js}</code></pre>
+            </div>
+            <div class="tab-pane" id="util_js" role="tabpanel" aria-labelledby="util_js-tab">
+              <pre class="line-numbers line-highlight"><code class="language-js">${util_js}</code></pre>
             </div>
           </div>
         </div>
