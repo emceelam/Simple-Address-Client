@@ -80,6 +80,15 @@ function rest_doc_start () {
       $("#card_put_address>.card-header").text(status_line);
     });
   });
+
+  $("#get_geocode_button").click(function() {
+    var address_id = $("#get_geocode_id").text();
+    ajax_address.done_geocode (address_id, function(address, parm2, xhr) {
+      $("#card_get_geocode .result_body").text(JSON.stringify(address, null, 4));
+      let status_line = `${xhr.status} ${xhr.statusText}`;
+      $("#card_get_geocode>.card-header").text(status_line);
+    });
+  });
 }
 
 
@@ -93,6 +102,7 @@ function set_button_address_id(id_to_address) {
   $("#get_address_id").text(id);
   $("#put_address_id").text(id);
   $("#delete_address_id").text(id);
+  $("#get_geocode_id").text(id);
 
   if (ids.length) {
     return;
@@ -101,6 +111,8 @@ function set_button_address_id(id_to_address) {
   $("#get_address_id_button").prop("disabled", true);
   $("#put_address_button").prop("disabled", true);
   $("#delete_address_button").prop("disabled", true);
+  $("#get_geocode_id").prop("disabled", true);
+
 }
 
 

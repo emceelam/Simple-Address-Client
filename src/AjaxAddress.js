@@ -72,6 +72,15 @@ export default class AjaxAddresses {
       .done( done_handler );
   }
 
+  done_geocode (id, done_handler) {
+    $.ajax({
+      type: "GET",
+      url: `http://${Conf.host}:${Conf.port}/api/addresses/${id}/geocode`,
+      error: this.reject.bind(this),
+    })
+      .done( done_handler );
+  }
+
   promise_get_all () {
     return new Promise( (resolve) => {
       $.ajax({
@@ -138,21 +147,6 @@ export default class AjaxAddresses {
           "Content-Type" : "application/json",
         },
         dataType: "json",
-        success: resolve,
-        error: this.reject.bind(this),
-      });
-    });
-  }
-
-  promise_geocode (address) {
-    var street = encodeURI(address["street"]);
-    var city   = encodeURI(address["city"]);
-    var state  = encodeURI(address["state"]);
-    var zip    = encodeURI(address["zip"]);
-    return new Promise ( (resolve) => {
-      $.ajax({
-        type: "GET",
-        url: `http://${Conf.host}:${Conf.port}/api/geocode?street=${street}&city=${city}&state=${state}&zip=${zip}`,
         success: resolve,
         error: this.reject.bind(this),
       });

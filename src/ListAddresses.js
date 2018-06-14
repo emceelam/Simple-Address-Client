@@ -153,13 +153,9 @@ export default class ListAddresses  {
       return;
     }
 
-    this.ajax_address.promise_geocode(address).then(
-      function(lat_lng) {
-        address["lat"] = lat_lng["lat"];
-        address["lng"] = lat_lng["lng"];
-        address_map.add_marker(id, address);
-      },
-    );
+    this.ajax_address.done_geocode(id, function(address, parm2, xhr) {
+      address_map.add_marker(id, address);
+    });
   }
 
   delete_marker (id) {

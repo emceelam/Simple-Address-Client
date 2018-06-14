@@ -65,6 +65,7 @@
           </h2>
           <p>
             Insert into the database a new address. Returns same address with addition of newly allocated id. Operation is idempotent.
+            Note: Does not geocode. Geocoding is freaking slow. Geocoding is available as a separate REST action through <code>GET&nbsp;/api/addresses/{id}/geocode</code>
           </p>
           <button type="button" class="btn btn-primary" id="post_address_button">
             POST /api/addresses
@@ -130,6 +131,23 @@
             </div>
           </div>
           
+          <h2>
+            GET /api/addresses/{id}/geocode
+          </h2>
+          <p>
+            Given an address_id, get the latitude and longitude. Geocoding is slow.
+          </p>
+          <button type="button" class="btn btn-primary" id="get_geocode_button">
+            GET /api/addresses/<span id="get_geocode_id">{id}</span>/geocode
+          </button>
+          <div class="card" id="card_get_geocode">
+            <div class="card-header">
+              output
+            </div>
+            <div class="card-body">
+              <pre><code class="result_body"></code></pre>
+            </div>
+          </div>
         </div>
       </div>
       <p>
