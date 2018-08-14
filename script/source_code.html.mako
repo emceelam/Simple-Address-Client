@@ -12,6 +12,10 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
       crossorigin="anonymous">
     <style type="text/css">
+      .tab-content {
+        background: #272822;
+        border-radius: 0.25rem;
+      }
     </style>
   </head>
   <body>
@@ -31,20 +35,20 @@
       </nav>
       <div class="row">
         <div class="col-10">
-          <div class="tab-content">
-            <div class="tab-pane active" id="address_app_html" role="tabpanel" aria-labelledby="address_app_html-tab">
+          <div class="tab-content" >
+            <div class="tab-pane fade show active" id="address_app_html" role="tabpanel" aria-labelledby="address_app_html-tab">
               <pre class="line-numbers line-highlight"><code class="language-html">${address_app_html}</code></pre>
             </div>
-            <div class="tab-pane" id="ajax_address_js" role="tabpanel" aria-labelledby="ajax_address_js-tab">
+            <div class="tab-pane fade" id="ajax_address_js" role="tabpanel" aria-labelledby="ajax_address_js-tab">
               <pre class="line-numbers line-highlight"><code class="language-js">${ajax_address_js}</code></pre>
             </div>
-            <div class="tab-pane" id="list_addresses_js" role="tabpanel" aria-labelledby="list_addresses_js-tab">
+            <div class="tab-pane fade" id="list_addresses_js" role="tabpanel" aria-labelledby="list_addresses_js-tab">
               <pre class="line-numbers line-highlight"><code class="language-js">${list_addresses_js}</code></pre>
             </div>
-            <div class="tab-pane" id="address_map_js" role="tabpanel" aria-labelledby="address_map_js-tab">
+            <div class="tab-pane fade" id="address_map_js" role="tabpanel" aria-labelledby="address_map_js-tab">
               <pre class="line-numbers line-highlight"><code class="language-js">${address_map_js}</code></pre>
             </div>
-            <div class="tab-pane" id="util_js" role="tabpanel" aria-labelledby="util_js-tab">
+            <div class="tab-pane fade" id="util_js" role="tabpanel" aria-labelledby="util_js-tab">
               <pre class="line-numbers line-highlight"><code class="language-js">${util_js}</code></pre>
             </div>
           </div>
