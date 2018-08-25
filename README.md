@@ -31,7 +31,7 @@ Open terminal
 
     vi address_app.conf.json
       # Add API key(s)
-      # Set hostname and port, e.g. sjsutech.com, 3000
+      # Set hostname and port, e.g. localhost, 3000
 
     make
       # yes, again
@@ -47,7 +47,7 @@ Open web browser
 
 # SEE ALSO
 
-The server side portion, [Simple Address Mojo](https://github.com/emceelam/Simple-Address-Mojo)
+The server side portion, [Simple Address Mojo](https://github.com/emceelam/Simple-Address-Mojo), [Simple Address Laravel](https://github.com/emceelam/Simple-Address-Laravel)
 
 # AUTHOR
 
