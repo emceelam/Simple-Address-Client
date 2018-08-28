@@ -21,17 +21,51 @@
   <body>
     <div class='container-fluid'>
       <h1>Simple Address Client</h1>
-      <nav class="nav nav-pills" id="source_code_tab" role="tablist">
-        <a class="nav-link active" id="address_app_html-tab" data-toggle="pill" href="#address_app_html" role="tab" aria-controls="" aria-selected="true">
-          address_app.html</a>
-        <a class="nav-link" id="ajax_address_js-tab" data-toggle="pill" href="#ajax_address_js" role="tab" aria-controls="ajax_address_js" aria-selected="false">
-          AjaxAddress.js</a>
-        <a class="nav-link" id="list_addresses_js-tab" data-toggle="pill" href="#list_addresses_js" role="tab" aria-controls="list_addresses_js" aria-selected="false">
-          ListAddresses.js</a>
-        <a class="nav-link" id="address_map_js-tab" data-toggle="pill" href="#address_map_js" role="tab" aria-controls="address_map_js" aria-selected="false">
-          AddressMap.js</a>
-        <a class="nav-link" id="util_js-tab" data-toggle="pill" href="#util_js" role="tab" aria-controls="util_js" aria-selected="false">
-          util.js</a>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav nav-pills mr-auto" id="pills-tab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="address_app_app-tab" data-toggle="pill" href="#address_app_html" role="tab" aria-controls="address_app_html" aria-selected="true">
+                address_app.html
+                <span class="sr-only">(currently)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="ajax_address_js-tab" data-toggle="pill" href="#ajax_address_js" role="tab" aria-controls="ajax_address_js" aria-selected="false">
+                AjaxAddress.js</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="list_addresses_js-tab" data-toggle="pill" href="#list_addresses_js" role="tab" aria-controls="list_addresses_js" aria-selected="false">
+                ListAddresses.js</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="address_map_js-tab" data-toggle="pill" href="#address_map_js" role="tab" aria-controls="address_map_js" aria-selected="false">
+                AddressMap.js</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="util_js-tab" data-toggle="pill" href="#util_js" role="tab" aria-controls="util_js" aria-selected="false">
+                util.js</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                github
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item"
+                  href="https://github.com/emceelam/Simple-Address-Client">
+                  Simple Address Client</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://github.com/emceelam/Simple-Address-Laravel">
+                  Laravel REST back-end</a>
+                <a class="dropdown-item" href="https://github.com/emceelam/Simple-Address-Mojo">
+                  Mojolicious REST back-end</a>
+              </div>
+            </li>
+          </ul>
+        </div>
       </nav>
       <div class="row">
         <div class="col-10">
