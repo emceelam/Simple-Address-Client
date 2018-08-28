@@ -10,7 +10,9 @@ This is a simple address app, utilizing Google Maps, AJAX, and REST. The REST si
 
 Get a [Google Map API key](https://developers.google.com/maps/documentation/javascript/get-api-key).
 
-If you are running on a public server, generate an API key and set Key Restriction to "HTTP referrers". This API key works on browser clients (exactly what we need)
+If you are running on a public server, generate an API key and set Key Restriction to "HTTP referrers". This API key works on browser clients (exactly what we need). On this API key, add the URL that your web page will originate from, e.g.
+http://sjsutech.com/simple_address_client/*
+
 
 If you are running on a localhost, you can use a single API key for both browser and server. When you generate your API key, set Key restriction to "None".
 
@@ -29,7 +31,7 @@ Open terminal
 
     vi address_app.conf.json
       # Add API key(s)
-      # Set hostname and port, e.g. sjsutech.com, 3000
+      # Set hostname and port, e.g. localhost, 3000
 
     make
       # yes, again
@@ -45,7 +47,7 @@ Open web browser
 
 # SEE ALSO
 
-The server side portion, [Simple Address Mojo](https://github.com/emceelam/Simple-Address-Mojo)
+The server side portion, [Simple Address Mojo](https://github.com/emceelam/Simple-Address-Mojo), [Simple Address Laravel](https://github.com/emceelam/Simple-Address-Laravel)
 
 # AUTHOR
 
