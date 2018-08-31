@@ -62,8 +62,6 @@
                   Laravel(PHP) REST back-end</a>
                 <a class="dropdown-item" href="https://github.com/emceelam/Simple-Address-Mojo">
                   Mojolicious(Perl) REST back-end</a>
-                <a class="dropdown-item" href="https://github.com/emceelam/Simple-Address-Dancer">
-                  Dancer2(Perl) REST back-end</a>
               </div>
             </li>
           </ul>
