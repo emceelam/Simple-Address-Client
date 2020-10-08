@@ -27,6 +27,9 @@ Open terminal
     git clone git@github.com:emceelam/Simple-Address-Client.git simple_address_client
     cd simple_address_client
 
+    sudo apt-get install python3 python3-pip
+    sudo pip3 install mako spitslurp
+
     make
 
     vi address_app.conf.json
@@ -37,13 +40,13 @@ Open terminal
       # yes, again
       # uses modified address_app.conf to regenerate files
 
-    # put a soft link of the dist directory to your public_htmlt directory
+    # put a soft link of the dist directory to your public_html directory
     ln -s /your_path/simple_address_client/dist/ ~/public_html/simple_address_client
 
 
 Open web browser
 
-    http://localhost/~username/simple_address_client
+    http://localhost/~username/simple_address_client/address_app.html
 
 # SEE ALSO
 

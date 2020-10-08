@@ -1,10 +1,4 @@
 script/address.db
 address_app.conf.json
 node_modules
-package-lock.json
-dist/app.bundle.js
-dist/rest_doc.bundle.js
-dist/source_code.bundle.js
-dist/address_app.html
-dist/source_code.html
-dist/README.html
+dist/*
